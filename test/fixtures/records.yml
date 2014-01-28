@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  opponent_name: MyString
+  opponent_hero: 1
+  first: false
+  win: false
+  notes: MyText
+  deck_id: 
+
+two:
+  opponent_name: MyString
+  opponent_hero: 1
+  first: false
+  win: false
+  notes: MyText
+  deck_id: 

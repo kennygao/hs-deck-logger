@@ -1,0 +1,41 @@
+<%= form_for [@deck, @record] do |f| %>
+  <% if @record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+      <% @record.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :opponent_name %><br>
+    <%= f.text_field :opponent_name %>
+  </div>
+  <div class="field">
+    <%= f.label :opponent_hero %><br>
+    <%= f.number_field :opponent_hero %>
+  </div>
+  <div class="field">
+    <%= f.label :first %><br>
+    <%= f.check_box :first %>
+  </div>
+  <div class="field">
+    <%= f.label :win %><br>
+    <%= f.check_box :win %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <!-- <div class="field">
+    <%= f.label :deck_id %><br>
+    <%= f.text_field :deck_id %>
+  </div> -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

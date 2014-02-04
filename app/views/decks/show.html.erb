@@ -10,5 +10,9 @@
   <%= @deck.notes %>
 </p>
 
+<p>
+  <strong><%= link_to 'Records', [@deck, Record] %></strong>
+</p>
+
 <%= link_to 'Edit', edit_deck_path(@deck) %> |
 <%= link_to 'Back', decks_path %>

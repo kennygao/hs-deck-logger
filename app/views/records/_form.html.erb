@@ -11,31 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :opponent_name %><br>
-    <%= f.text_field :opponent_name %>
+    <%= f.text_field :opponent_name, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :opponent_hero %><br>
-    <%= f.number_field :opponent_hero %>
+    <%= f.number_field :opponent_hero, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :first %><br>
     <%= f.check_box :first %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :win %><br>
     <%= f.check_box :win %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :notes %><br>
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, class: 'form-control' %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :deck_id %><br>
-    <%= f.text_field :deck_id %>
-  </div> -->
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>

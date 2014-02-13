@@ -30,5 +30,5 @@
   <%= @record.deck %>
 </p>
 
-<%= link_to 'Edit', polymorphic_path([@deck, @record], action: :edit) %> |
-<%= link_to 'Back', [@deck, Record] %>
+<%= link_to 'Edit', polymorphic_path([@deck, @record], action: :edit), class: 'btn btn-default' %>
+<%= link_to 'Back', [@deck, Record], class: 'btn btn-default' %>

@@ -8,10 +8,7 @@
       <th>First</th>
       <th>Win</th>
       <th>Notes</th>
-      <!-- <th>Deck</th> -->
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -23,10 +20,11 @@
         <td><%= record.first %></td>
         <td><%= record.win %></td>
         <td><%= record.notes %></td>
-        <!-- <td><%= record.deck %></td> -->
-        <td><%= link_to 'Show', [@deck, record] %></td>
-        <td><%= link_to 'Edit', polymorphic_path([@deck, record], action: :edit) %></td>
-        <td><%= link_to 'Destroy', [@deck, record], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Show', [@deck, record], class: 'btn btn-primary btn-sm' %>
+          <%= link_to 'Edit', polymorphic_path([@deck, record], action: :edit), class: 'btn btn-default btn-sm' %>
+          <%= link_to 'Destroy', [@deck, record], class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Record', polymorphic_path([@deck, Record], action: :new) %>
+<%= link_to 'New Record', polymorphic_path([@deck, Record], action: :new), class: 'btn btn-success' %>

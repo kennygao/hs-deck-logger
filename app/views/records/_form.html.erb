@@ -17,7 +17,12 @@
   </div>
   <div class="form-group">
     <%= f.label :opponent_hero %><br>
-    <%= f.number_field :opponent_hero, class: 'form-control' %>
+    <% Record::HEROES.each_with_index do |hero, index| %>
+      <div class="radio">
+        <%= f.radio_button :opponent_hero, index %>
+        <%= f.label :opponent_hero, hero, value: index %>
+      </div>
+    <% end %>
   </div>
   <div class="form-group">
     <%= f.label :first %><br>

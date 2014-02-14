@@ -16,7 +16,7 @@
     <% @records.each do |record| %>
       <tr>
         <td><%= record.opponent_name %></td>
-        <td><%= record.opponent_hero %></td>
+        <td><%= Record::HEROES[record.opponent_hero] %></td>
         <td><%= record.first %></td>
         <td><%= record.win %></td>
         <td><%= record.notes %></td>
